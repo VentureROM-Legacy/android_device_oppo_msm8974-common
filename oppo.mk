@@ -22,6 +22,9 @@
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# common Oppo overlays
+DEVICE_PACKAGE_OVERLAYS := $(LOCAL_PATH)/overlay
+
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
