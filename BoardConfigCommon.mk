@@ -16,3 +16,11 @@
 
 
 BOARD_HARDWARE_CLASS += device/oppo/msm8974-common/cmhw
+
+# SELinux
+BOARD_SEPOLICY_DIRS += device/oppo/msm8974-common/sepolicy
+BOARD_SEPOLICY_UNION += \
+       app.te \
+       device.te \
+       vold.te \
+       file_contexts 
