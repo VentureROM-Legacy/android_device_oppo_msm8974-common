@@ -17,6 +17,8 @@
 
 BOARD_HARDWARE_CLASS += device/oppo/msm8974-common/cmhw
 
+TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
+
 # SELinux
 BOARD_SEPOLICY_DIRS += device/oppo/msm8974-common/sepolicy
 BOARD_SEPOLICY_UNION += \
@@ -24,3 +26,6 @@ BOARD_SEPOLICY_UNION += \
        device.te \
        vold.te \
        file_contexts 
+
+# Enable workaround for slow rom flash
+BOARD_SUPPRESS_SECURE_ERASE := true
