@@ -14,13 +14,14 @@
 # limitations under the License.
 #
 
+LOCAL_PATH := device/oppo/msm8974-common
 
-BOARD_HARDWARE_CLASS += device/oppo/msm8974-common/cmhw
+BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
 
 TARGET_KERNEL_SOURCE := kernel/oppo/msm8974
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/oppo/msm8974-common/sepolicy
+BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 BOARD_SEPOLICY_UNION += \
        app.te \
        device.te \
