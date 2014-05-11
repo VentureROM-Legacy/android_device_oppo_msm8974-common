@@ -29,7 +29,7 @@ import org.cyanogenmod.hardware.util.FileUtils;
 
 public class KeyDisabler {
 
-    private static String CONTROL_PATH = "/proc/touchpanel/keypad_enable";
+    private static String CONTROL_PATH = "/sys/aospa/capacitive_disable";
     private static boolean mEnabled = true;
 
     public static boolean isSupported() { return true; }
