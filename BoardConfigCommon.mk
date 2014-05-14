@@ -29,7 +29,7 @@ BOARD_SEPOLICY_UNION += \
        file_contexts 
 
 # Enable workaround for slow rom flash
-BOARD_SUPPRESS_SECURE_ERASE := true
+COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
 
 # Audio/media
 BOARD_USES_SEPERATED_HEADSET_MIC := true
