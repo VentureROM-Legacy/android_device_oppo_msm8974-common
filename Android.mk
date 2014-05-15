@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter find7a find7 oneplus,$(TARGET_DEVICE)),)
+ifneq ($(filter find7a find7 one,$(TARGET_DEVICE)),)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
