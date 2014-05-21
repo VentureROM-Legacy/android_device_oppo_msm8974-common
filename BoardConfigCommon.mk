@@ -28,8 +28,10 @@ BOARD_SEPOLICY_UNION += \
        vold.te \
        file_contexts 
 
-# Enable workaround for slow rom flash
-COMMON_GLOBAL_CFLAGS += -DNO_SECURE_DISCARD
+# QCOM hardware
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_USES_QCOM_BSP := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP -DNO_SECURE_DISCARD
 
 # Audio/media
 BOARD_USES_SEPERATED_HEADSET_MIC := true
