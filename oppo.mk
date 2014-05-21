@@ -59,16 +59,16 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml
 
-# Audio Configuration
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluence \
     persist.audio.fluence.voicecall=true \
     persist.audio.fluence.speaker=true \
     persist.audio.lowlatency.rec=false \
     af.resampler.quality=4 \
-    lpa.decode=false \
-    tunnel.decode=false \
-    tunnel.audiovideo.decode=true
+    ro.qc.sdk.audio.ssr=false \
+    audio.offload.buffer.size.kb=32 \
+    audio.offload.gapless.enabled=true \
+    av.offload.enable=true
 
 # NFC packages
 ifeq ($(TARGET_BUILD_VARIANT),user)
