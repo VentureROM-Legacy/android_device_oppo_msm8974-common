@@ -70,16 +70,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     tunnel.decode=false \
     tunnel.audiovideo.decode=true
 
-# NFC feature files
+# NFC packages
+ifeq ($(TARGET_BUILD_VARIANT),user)
+    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access.xml
+else
+    NFCEE_ACCESS_PATH := $(LOCAL_PATH)/configs/nfcee_access_debug.xml
+endif
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.nfc.xml:system/etc/permissions/android.hardware.nfc.xml
+    $(NFCEE_ACCESS_PATH):system/etc/nfcee_access.xml
 
 # NFC packages
 PRODUCT_PACKAGES += \
+    nfc.msm8974 \
     libnfc \
     libnfc_jni \
     Nfc \
-    Tag
+    Tag \
+    com.android.nfc_extras
 
 # Set Network Mode
 PRODUCT_PROPERTY_OVERRIDES += \
