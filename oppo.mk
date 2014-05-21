@@ -22,9 +22,6 @@
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
-# common Oppo overlays
-DEVICE_PACKAGE_OVERLAYS := device/oppo/msm8974-common/overlay
-
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
