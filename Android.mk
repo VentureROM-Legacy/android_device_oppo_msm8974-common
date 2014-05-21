@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := device/oppo/msm8974-common
 
 ifneq ($(filter find7a find7 one,$(TARGET_DEVICE)),)
 
