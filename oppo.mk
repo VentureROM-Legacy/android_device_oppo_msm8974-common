@@ -130,5 +130,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=1024
 
+# CM11s QuickBoot
+PRODUCT_COPY_FILES += \
+    device/oppo/msm8974-common/addons/QuickBoot.apk:system/app/QuickBoot.apk
+
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
 # $(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
