@@ -22,6 +22,10 @@
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
+# Keyhandler
+PRODUCT_PACKAGES += \
+    ConfigPanel
+
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
