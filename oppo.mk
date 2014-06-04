@@ -24,8 +24,8 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # Keyhandler
 PRODUCT_PACKAGES += \
-    ConfigPanel
-
+    OppoExtras
+    
 # Live Wallpapers
 PRODUCT_PACKAGES += \
     LiveWallpapers \
