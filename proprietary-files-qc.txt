@@ -165,9 +165,6 @@ vendor/lib/libthermalioctl.so
 bin/time_daemon
 -vendor/lib/libtime_genoff.so
 
-# QuickBoot
--app/QuickBoot.apk
-
 # Fastcharge
 bin/hvdcp
 
