@@ -38,13 +38,12 @@ TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
 
 # Kernel
+BOARD_CUSTOM_BOOTIMG_MK := device/oppo/msm8974-common/mkbootimg.mk
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_KERNEL_SEPARATED_DT := true
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
-TARGET_CUSTOM_DTBTOOL := dtbToolCM
 
 # Flags
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE -DQCOM_BSP
@@ -58,18 +57,12 @@ TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 TARGET_QCOM_AUDIO_VARIANT := caf
 TARGET_QCOM_DISPLAY_VARIANT := caf-new
 TARGET_QCOM_MEDIA_VARIANT := caf-new
-TARGET_DISPLAY_USE_RETIRE_FENCE := true
-
-# Simple time service client
-ifeq ($(QCPATH),)
-BOARD_USES_QC_TIME_SERVICES := true
-endif
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_DISABLED_DS1_DOLBY_DDP := true
 AUDIO_FEATURE_DISABLED_FM := true
-AUDIO_FEATURE_ENABLED_MULTIPLE_TUNNEL := true
+#AUDIO_FEATURE_ENABLED_MULTIPLE_TUNNEL := true
 BOARD_USE_RESAMPLER_IN_PCM_OFFLOAD_PATH := true
 
 # Bluetooth
@@ -167,7 +160,9 @@ TARGET_PROVIDES_GPS_LOC_API := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Enable CNE
-#BOARD_USES_QCNE := true
+ifneq ($(QCPATH),)
+BOARD_USES_QCNE := true
+endif
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := true
