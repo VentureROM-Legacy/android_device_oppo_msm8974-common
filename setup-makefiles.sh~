@@ -180,8 +180,12 @@ DEVICE_PACKAGE_OVERLAYS += vendor/$VENDOR/$DEVICE/overlay
 
 PRODUCT_PACKAGES += \\
     com.qualcomm.location \\
+<<<<<<< HEAD
+    QuickBoot \\
+=======
     PPPreference \\
     SVIService \\
+>>>>>>> 3f3b8774b7a800ad9a5f28538534bbaa9d92d6dc
     qcrilmsgtunnel \\
     shutdownlistener
 
