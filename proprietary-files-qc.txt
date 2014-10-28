@@ -178,9 +178,6 @@ vendor/lib/liblistenjni.so
 vendor/lib/liblistensoundmodel.so
 vendor/lib/liblistensoundmodel2.so
 
-# QuickBoot
--app/QuickBoot.apk
-
 # Fastcharge
 bin/hvdcp
 
